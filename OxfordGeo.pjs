@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="15.0" key="{D66AFC49-7CBB-49C1-86C9-0A3AFA1F8027}">
+	<children>
+		<child name="OxfordGeo" key="{6FBE4D99-C8ED-4ECC-AD31-8D4940EB933D}" path="OxfordGeo\OxfordGeo.mds" />
+	</children>
+	<testItems key="{09C0A5B9-E476-462D-AAB3-FA29CD8A462D}">
+		<children>
+			<testItem key="{6FBE4D99-C8ED-4ECC-AD31-8D4940EB933D}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{CC115305-53A8-4B08-9EC5-0E87BC8C381A}" />
+	<analysis key="{391F7749-0475-419F-BE63-7151AC997BC4}" />
+	<scc key="{C900492B-D218-429C-9AA0-264B7D78CA88}" name="Git Plugin">
+		<data />
+	</scc>
+</Root>
