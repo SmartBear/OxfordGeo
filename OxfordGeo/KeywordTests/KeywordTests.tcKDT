@@ -4,5 +4,6 @@
 		<child name="Test1" key="{D40A2891-1FA2-4054-B461-3ECDD7DE133C}" path="Test1.tcKDTest" />
 		<child name="Test2" key="{76837654-C934-48EC-9CE1-A734FEA3FB70}" path="Test2.tcKDTest" />
 		<child name="Test3" key="{C29440FD-9DCD-4860-B91C-AE9FA4527115}" path="Test3.tcKDTest" />
+		<child name="FileCheck" key="{D33C78B3-9B8E-4EBD-82D6-A23ED2FD44C9}" path="FileCheck.tcKDTest" />
 	</children>
 </Root>

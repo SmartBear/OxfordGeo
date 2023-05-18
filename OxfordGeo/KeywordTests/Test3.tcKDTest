@@ -13,6 +13,7 @@
 		<Children>
 			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
 				<Data Description="Selects the %p1 item of the &apos;%n&apos; combo box." Action="ClickItem">
+					<CommonData Disabled="True" />
 					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
 						<Parameter Name="Item" DefVarType="12" VarType="3" ValueType="1" ValueValue="24" />
 					</Parameters>
@@ -20,27 +21,40 @@
 				</Data>
 			</Operation>
 			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
-				<Data Description="Selects the %p1 item of the &apos;%n&apos; combo box." Action="ClickItem">
-					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
-						<Parameter Name="Item" DefVarType="12" VarType="3" ValueType="1" ValueValue="23" />
-					</Parameters>
+				<Data Description="Opens the control&apos;s drop-down window." Action="DropDown">
 					<ObjectSyntax LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}" Code="Aliases.OxTS_Georeferencer.HwndSource_MainWindow.MainWindow.ComboBox" />
 				</Data>
 			</Operation>
 			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
-				<Data Action="FindItemWithValue">
+				<Data Description="Returns an object by the values of the specified properties." Action="FindChild">
 					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
-						<Parameter Name="value" DefVarType="12" VarType="12" ValueType="0" ValueValue="0" />
-						<Parameter Name="index" DefVarType="12" VarType="12" ValueType="0" ValueValue="0" />
+						<Parameter Name="PropNames" DefVarType="12" VarType="8" ValueType="6" ValueValue="WPFControlText" />
+						<Parameter Name="PropValues" DefVarType="12" VarType="8" ValueType="6" ValueValue="Ultra Puck (VLP-32C)" />
+						<Parameter Name="Depth" DefVarType="3" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="RefreshTree" DefVarType="11" DefValueType="7" DefValueValue="True" VarType="11" ValueType="7" ValueValue="True" />
 					</Parameters>
 					<ObjectSyntax LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}" Code="Aliases.OxTS_Georeferencer.HwndSource_MainWindow.MainWindow.ComboBox" />
+				</Data>
+			</Operation>
+			<Operation Type="{6F20B0D8-E0CF-47FF-A68B-3E3672DD0CB0}">
+				<Data VariableType="2" VariableName="ItemObject">
+					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
+						<Parameter Name="NewValue" DefVarType="0" ParamType="{D44DB91E-FD74-4F67-BE3D-951A1238A9AD}" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{6F20B0D8-E0CF-47FF-A68B-3E3672DD0CB0}">
+				<Data VariableType="2" VariableName="ItemIndex">
+					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
+						<Parameter Name="NewValue" DefVarType="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="KeywordTests.Test3.Variables.ItemObject.Index" />
+					</Parameters>
 				</Data>
 			</Operation>
 			<Operation Type="{BFB3C418-1303-46B3-9B24-3624AB5EB529}">
 				<Data Description="Posts an information message to the test log." MessageType="0">
 					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
 						<Parameter Name="MessageText" DefVarType="12" ParamType="{D44DB91E-FD74-4F67-BE3D-951A1238A9AD}" />
-						<Parameter Name="Details" DefVarType="12" VarType="8" ValueType="6" ValueValue="" />
+						<Parameter Name="Details" DefVarType="12" ParamType="{83D6F80C-4323-4034-92E3-FD2A65D2E6FC}" VariableType="4" VariableName="ItemIndex" />
 						<Parameter Name="Priority" DefVarType="12" DefValueType="1" DefValueValue="300" VarType="3" ValueType="1" ValueValue="300">
 							<Values IsEnum="True">
 								<Value Type="1" Value="100" Text="pmLowest" />
@@ -58,6 +72,7 @@
 			</Operation>
 			<Operation Type="{2F0A05A2-4ECD-47CE-A12B-9843A308F2DC}">
 				<Data Description="Checks whether the %p2 property of the %p1 object %p3 %p4.">
+					<CommonData Disabled="True" />
 					<Parameters LangId="{7D0FC31C-B0A7-4F4F-B5AF-1F16370169CB}">
 						<Parameter Name="Object" DefVarType="12" ParamType="{FC0DF733-E97F-46DD-8307-EA4DFF891298}" Expression="Aliases.OxTS_Georeferencer.HwndSource_PopupRoot.PopupRoot.ComboboxitemPuckHiRes.TextblockPuckHiRes" />
 						<Parameter Name="Property" DefVarType="8" VarType="8" ValueType="6" ValueValue="Enabled" />
@@ -72,6 +87,9 @@
 	<Variables Version="4" Key="{FCB780CB-C9FF-4895-9D9B-5D8DEB2B8305}">
 		<Items>
 			<Variable Name="ItemIndex" Type="String" Local="False">
+				<DefValue />
+			</Variable>
+			<Variable Name="ItemObject" Type="Object" Local="False">
 				<DefValue />
 			</Variable>
 		</Items>
